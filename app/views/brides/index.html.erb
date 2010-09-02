@@ -1,0 +1,19 @@
+<% title "Brides" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Wedding Day</th>
+  </tr>
+  <% for bride in @brides %>
+    <tr>
+      <td><%=h bride.name %></td>
+      <td><%=h bride.wedding_day %></td>
+      <td><%= link_to "Show", bride %></td>
+      <td><%= link_to "Edit", edit_bride_path(bride) %></td>
+      <td><%= link_to "Destroy", bride, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Bride", new_bride_path %></p>

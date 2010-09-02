@@ -1,0 +1,16 @@
+<% form_for @gift do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :total_donations %><br />
+    <%= f.text_field :total_donations %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

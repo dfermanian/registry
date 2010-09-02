@@ -1,0 +1,15 @@
+one:
+  bride_id: 1
+  ip_address: MyString
+  first_name: MyString
+  last_name: MyString
+  card_type: MyString
+  card_expiration: 2010-08-25
+
+two:
+  bride_id: 1
+  ip_address: MyString
+  first_name: MyString
+  last_name: MyString
+  card_type: MyString
+  card_expiration: 2010-08-25

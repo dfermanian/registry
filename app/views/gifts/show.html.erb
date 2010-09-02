@@ -1,0 +1,20 @@
+<% title "Gift" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @gift.name %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%=h @gift.price %>
+</p>
+<p>
+  <strong>Total Donations:</strong>
+  <%=h @gift.total_donations %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_gift_path(@gift) %> |
+  <%= link_to "Destroy", @gift, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", gifts_path %>
+</p>

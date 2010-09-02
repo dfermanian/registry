@@ -1,0 +1,9 @@
+one:
+  name: MyString
+  price: 1.5
+  total_donations: 1.5
+
+two:
+  name: MyString
+  price: 1.5
+  total_donations: 1.5
