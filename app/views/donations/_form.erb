@@ -1,0 +1,46 @@
+<% form_for @donation do |f| %>
+  <%= f.error_messages %>
+
+	<% if @donation.express_token.blank? %>
+		<p>
+		  <%= f.label :first_name %><br />
+		  <%= f.text_field :first_name %>
+		</p>
+		<p>
+		  <%= f.label :last_name %><br />
+		  <%= f.text_field :last_name %>
+		</p>
+		<p>
+		  <%= f.label :card_type %><br />
+		<%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american express"]]%>
+		</p>
+		<p>
+		  <%= f.label :card_number %><br />
+		  <%= f.text_field :card_number %>
+		</p>
+		<p>
+		  <%= f.label :card_verification, "Credit Verification Value (CVV)"%><br />
+		  <%= f.text_field :card_verification %>
+		</p>
+		<p>
+		  <%= f.label :card_expiration %><br />
+		  <%= f.date_select :card_expiration, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
+		</p>
+		<p>
+	    <%= f.label :amount %><br />
+	    <%= f.text_field :amount %>
+		  <%= f.hidden_field :gift_id %>
+		</p>
+		<%#= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), create_express_new_donation_path(:gift_id => @donation.gift_id, :amount => @donation.amount, :first_name => @donation.first_name, :last_name => @donation.last_name, :paypal_donation => true), :method => :post %>
+	  <p><%= f.submit "paypal_express", :type => "image", :src => "https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" %></p>
+	<% else %>
+		<p> <%=h @donation.first_name %> <%=h @donation.last_name %>
+				<%=h @donation.amount %> <%=h @donation.paypal_donation %>
+		</p>
+	  <p>
+			<%= f.hidden_field :express_token %>
+	  </p>
+	<% end %>
+
+  <p><%= f.submit "Submit Donation" %></p>
+<% end %>
