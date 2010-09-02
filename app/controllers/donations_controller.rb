@@ -33,6 +33,7 @@ class DonationsController < ApplicationController
           :cancel_return_url => brides_url)
         redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
       else
+
       if @donation.submit_donation
         render :action => "success"
       else
