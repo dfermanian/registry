@@ -20,6 +20,22 @@
   <strong>Amount:</strong>
   <%=h @donation.amount %>
 </p>
+<p>
+  <strong>paypal?:</strong>
+  <%=h @donation.paypal_donation %>
+</p>
+<p>
+  <strong>gift id:</strong>
+  <%=h @donation.gift_id %>
+</p>
+<p>
+  <strong>express token:</strong>
+  <%=h @donation.express_token %>
+</p>
+<p>
+  <strong>express payer id:</strong>
+  <%=h @donation.express_payer_id %>
+</p>
 
 <p>
   <%= link_to "Edit", edit_donation_path(@donation) %> |

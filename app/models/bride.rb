@@ -3,6 +3,4 @@ class Bride < ActiveRecord::Base
   has_many :gifts
 
   accepts_nested_attributes_for :gifts
-  
-  
 end

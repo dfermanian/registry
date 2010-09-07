@@ -12,9 +12,8 @@ class Donation < ActiveRecord::Base
   validates_numericality_of :amount, :greater_than => 0
 
   def submit_donation
-    response = process_donation
-    transactions.create!(:action => "submit_donation", :amount => price_in_cents, :response => response)
-    response.success?
+    submit_request = process_donation
+    submit_request.success?
   end
 
   def price_in_cents
@@ -40,9 +39,11 @@ class Donation < ActiveRecord::Base
   
   def process_donation
     if express_token.blank?
-      STANDARD_GATEWAY.purchase(price_in_cents, credit_card, standard_purchase_options)
+      response = STANDARD_GATEWAY.purchase(price_in_cents, credit_card, standard_purchase_options)
+      transactions.create!(:action => "submit_donation", :amount => price_in_cents, :response => response)
     else
-      EXPRESS_GATEWAY.purchase(price_in_cents, express_purchase_options)
+      response = EXPRESS_GATEWAY.purchase(price_in_cents, express_purchase_options)
+      transactions.create!(:action => "submit_express_donation", :amount => price_in_cents, :response => response)
     end
   end
 
