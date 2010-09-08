@@ -1020,3 +1020,101 @@ Migrating to RemoveTotalDonationsFromGift (20100908180158)
   [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
   [4;35;1mSQL (1.6ms)[0m   [0mdescribe `users`[0m
   [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (60.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGifts (20100824213302)
+Migrating to CreateBrides (20100824213338)
+Migrating to CreateDonations (20100825185248)
+Migrating to CreateDonationTransactions (20100825203335)
+Migrating to CreateHellos (20100826204127)
+Migrating to CreateUserMailers (20100831213742)
+Migrating to CreateUsers (20100831224951)
+Migrating to CreateAssignments (20100901183950)
+Migrating to CreateMoves (20100901225127)
+Migrating to RemoveTotalDonationsFromGift (20100908180158)
+Migrating to AddPaypalEmailToBride (20100908184921)
+  [4;35;1mSQL (330.7ms)[0m   [0mALTER TABLE `brides` ADD `paypal_email` varchar(255)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100908184921')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `assignments`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mdescribe `assignments`[0m
+  [4;36;1mSQL (9.4ms)[0m   [0;1mSHOW KEYS FROM `assignments`[0m
+  [4;35;1mSQL (6.8ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mSQL (10.6ms)[0m   [0;1mdescribe `brides`[0m
+  [4;35;1mSQL (4.4ms)[0m   [0mSHOW KEYS FROM `brides`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mdescribe `donation_transactions`[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mSHOW KEYS FROM `donation_transactions`[0m
+  [4;35;1mSQL (10.4ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mdescribe `donations`[0m
+  [4;35;1mSQL (5.2ms)[0m   [0mSHOW KEYS FROM `donations`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mdescribe `gifts`[0m
+  [4;36;1mSQL (9.1ms)[0m   [0;1mSHOW KEYS FROM `gifts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `hellos`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `hellos`[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mSHOW KEYS FROM `hellos`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `moves`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `moves`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `moves`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `user_mailers`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `user_mailers`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `user_mailers`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGifts (20100824213302)
+Migrating to CreateBrides (20100824213338)
+Migrating to CreateDonations (20100825185248)
+Migrating to CreateDonationTransactions (20100825203335)
+Migrating to CreateHellos (20100826204127)
+Migrating to CreateUserMailers (20100831213742)
+Migrating to CreateUsers (20100831224951)
+Migrating to CreateAssignments (20100901183950)
+Migrating to CreateMoves (20100901225127)
+Migrating to RemoveTotalDonationsFromGift (20100908180158)
+Migrating to AddPaypalEmailToBride (20100908184921)
+Migrating to CreateFacebookTemplates (20100908202454)
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (73.6ms)[0m   [0;1mCREATE TABLE `facebook_templates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `template_name` varchar(255) NOT NULL, `content_hash` varchar(255) NOT NULL, `bundle_id` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (241.6ms)[0m   [0mCREATE UNIQUE INDEX `index_facebook_templates_on_template_name` ON `facebook_templates` (`template_name`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100908202454')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `assignments`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `assignments`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `assignments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `brides`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `brides`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `donation_transactions`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `donation_transactions`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `donations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `donations`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `facebook_templates`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `facebook_templates`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `facebook_templates`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `gifts`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `gifts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `hellos`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `hellos`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `hellos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `moves`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `moves`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `moves`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `user_mailers`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `user_mailers`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `user_mailers`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `users`[0m

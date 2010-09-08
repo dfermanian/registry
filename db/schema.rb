@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100908180158) do
+ActiveRecord::Schema.define(:version => 20100908202454) do
 
   create_table "assignments", :force => true do |t|
     t.datetime "created_at"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20100908180158) do
     t.date     "wedding_day"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "paypal_email"
   end
 
   create_table "donation_transactions", :force => true do |t|
@@ -49,6 +50,14 @@ ActiveRecord::Schema.define(:version => 20100908180158) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "facebook_templates", :force => true do |t|
+    t.string "template_name", :null => false
+    t.string "content_hash",  :null => false
+    t.string "bundle_id"
+  end
+
+  add_index "facebook_templates", ["template_name"], :name => "index_facebook_templates_on_template_name", :unique => true
 
   create_table "gifts", :force => true do |t|
     t.string   "name"
