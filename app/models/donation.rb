@@ -31,12 +31,15 @@ class Donation < ActiveRecord::Base
   end
 
   def paypal?
-    paypal_donation
-    true
+    if card_number.blank? && card_verification.blank?
+      true
+    else
+      validate_card
+    end
   end
-  
+
   private
-  
+
   def process_donation
     if express_token.blank?
       response = STANDARD_GATEWAY.purchase(price_in_cents, credit_card, standard_purchase_options)
@@ -69,7 +72,6 @@ class Donation < ActiveRecord::Base
     }
   end
   
-  
   def validate_card
     if express_token.blank? && !credit_card.valid?
       credit_card.errors.full_messages.each do |message|
@@ -77,7 +79,7 @@ class Donation < ActiveRecord::Base
       end
     end
   end
-  
+
   def credit_card
     @credit_card ||= ActiveMerchant::Billing::CreditCard.new(
     :type => card_type,

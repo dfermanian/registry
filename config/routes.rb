@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :donations, :new => { :create_express => :get }
+  map.resources :donations, :member => { :paypal_response => :get }
 
   map.resources :brides
 

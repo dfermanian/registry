@@ -31,16 +31,13 @@
 	    <%= f.text_field :amount %>
 		  <%= f.hidden_field :gift_id %>
 		</p>
-		<%#= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), create_express_new_donation_path(:gift_id => @donation.gift_id, :amount => @donation.amount, :first_name => @donation.first_name, :last_name => @donation.last_name, :paypal_donation => true), :method => :post %>
+		<%#= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), create_express_new_donation_path(:gift_id => @donation.gift_id, :amount => @donation.amount, :first_name => @donation.first_name, :last_name => @donation.last_name, :paypal_donation => true) %>
 	  <p><%= f.submit "paypal_express", :type => "image", :src => "https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" %></p>
 	<% else %>
-		<p> <%=h @donation.first_name %> <%=h @donation.last_name %> </p>
+		<p> <%=h @donation.first_name %> <%=h @donation.last_name  %> <%=h @donation.gift.name %></p>
 	  <p>
 			<%= f.hidden_field :express_token%>
-			<%= f.hidden_field :amount, :value => params[:amount] %>
-			<%= f.hidden_field :paypal_donation, :value => params[:paypal_donation] %>
 			<%= f.hidden_field :express_payer_id %>
-		  <%= f.hidden_field :gift_id, :value => params[:gift_id]%>			
 	  </p>
 	<% end %>
   <p><%= f.submit "Submit Donation" %></p>

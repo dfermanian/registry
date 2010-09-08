@@ -9,8 +9,9 @@ class BridesController < ApplicationController
   
   def new
     @bride = Bride.new
-    2.times do |b|
-      gifts = @bride.gifts.build
+    2.times do
+      gift = @bride.gifts.build
+      gift.total_donations = 0
     end
   end
   
