@@ -12,5 +12,6 @@ class DonationTransaction < ActiveRecord::Base
     self.authorization = nil
     self.message = e.message
     self.params = {}
+    
   end
 end
