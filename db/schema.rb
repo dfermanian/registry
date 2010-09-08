@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100901225127) do
+ActiveRecord::Schema.define(:version => 20100908180158) do
 
   create_table "assignments", :force => true do |t|
     t.datetime "created_at"
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(:version => 20100901225127) do
   create_table "gifts", :force => true do |t|
     t.string   "name"
     t.float    "price"
-    t.float    "total_donations"
     t.integer  "bride_id"
     t.datetime "created_at"
     t.datetime "updated_at"
