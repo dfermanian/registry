@@ -20,7 +20,7 @@
 	<fb:fbml> 
 		<%= yield %>
 	</fb:fbml>
-	<% unless current_user.has_permission? "publish_stream" %>
+	<% unless current_user.facebook_session.user.has_permission? "publish_stream" %>
 	  <% javascript_tag do %>
 	    function permission_ondone(result)
 	    {
