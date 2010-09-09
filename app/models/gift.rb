@@ -6,7 +6,7 @@ class Gift < ActiveRecord::Base
   def total_donations
     total=0
     for donation in donations
-      if donation.transactions[0] #if the donation's transcation was a success
+      if donation.transactions[0]
           total = total + donation.amount
       end
     end
