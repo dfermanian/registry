@@ -24,7 +24,7 @@ class DonationsController < ApplicationController
   def create
     @donation = Donation.new(params[:donation])
     @donation.ip_address = request.remote_ip
-    @donation.paypal_donation = true if params[:commit] = "paypal_express"
+    (params[:commit] == "paypal_express")? @donation.paypal_donation = true : @donation.paypal_donation = false
     if @donation.save
       unless @donation.paypal_donation
         if @donation.submit_donation

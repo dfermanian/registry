@@ -31,7 +31,7 @@ class Donation < ActiveRecord::Base
   end
 
   def paypal?
-    if card_number.blank? && card_verification.blank?
+    if paypal_donation
       true
     else
       validate_card
