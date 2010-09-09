@@ -22,19 +22,20 @@
 	</fb:fbml>
 
     </div>
-		<fb:fbml> 
-	<% unless current_user.facebook_session.user.has_permission? "publish_stream" %>
-	  <% javascript_tag do %>
-	    function permission_ondone(result)
+
+	<% # unless current_user.facebook_session.user.has_permission? "publish_stream" %>
+	  <% #javascript_tag do %>
+	    /*function permission_ondone(result)
 	    {
 	       if(result == "") {
 	          document.setLocation('<%= fb_about_url %>');
 	       }
 	    }
 	    //Facebook.showPermissionDialog('publish_stream', permission_ondone, false);
-	  <% end %>
-	<% end %>
-	</fb:fbml>
+	*/
+	  <% #end %>
+	<% #end %>
+
 
   </body>
 </html>
