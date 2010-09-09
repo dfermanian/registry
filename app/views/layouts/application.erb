@@ -20,6 +20,9 @@
 	<fb:fbml> 
 		<%= yield %>
 	</fb:fbml>
+
+    </div>
+		<fb:fbml> 
 	<% unless current_user.facebook_session.user.has_permission? "publish_stream" %>
 	  <% javascript_tag do %>
 	    function permission_ondone(result)
@@ -31,9 +34,7 @@
 	    Facebook.showPermissionDialog('publish_stream', permission_ondone, false);
 	  <% end %>
 	<% end %>
-
-    </div>
-
+	</fb:fbml>
 
   </body>
 </html>
