@@ -16,6 +16,6 @@ config.after_initialize do
     :password => "1282856108",
     :signature => "Ab4OgXA2p1X5c9v.s0-nCMMM1rjmAwURqTYJndvbyvJLaIKOuKFm2Lor"
     }
-  ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
-  ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
-end
+    ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
+    ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
+  end
