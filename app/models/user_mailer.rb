@@ -1,10 +1,10 @@
 class UserMailer < Facebooker::Rails::Publisher
   
-  def profile(user)
+  def profile(user, friend)
       fbml = "Fuck Thomas Jefferson"
       send_as :publish_stream
       from user
-      target user
+      target friend
       message fbml
     end
     
