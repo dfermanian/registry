@@ -3,7 +3,7 @@ class Donation < ActiveRecord::Base
   
   belongs_to :gift
     
-  has_many :transactions, :class_name => "DonationTransaction"
+  has_many :transactions, :class_name => "DonationTransaction", :dependent => :destroy
   
   attr_accessor :card_number, :card_verification
 
@@ -19,7 +19,7 @@ class Donation < ActiveRecord::Base
   def price_in_cents
     (amount*100).round
   end
-  
+
   def express_token=(token)
     write_attribute(:express_token, token)
     if new_record? && !token.blank?
@@ -71,7 +71,7 @@ class Donation < ActiveRecord::Base
       :payer_id => express_payer_id
     }
   end
-  
+
   def validate_card
     if express_token.blank? && !credit_card.valid?
       credit_card.errors.full_messages.each do |message|

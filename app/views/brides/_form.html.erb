@@ -9,15 +9,8 @@
     <%= f.datetime_select :wedding_day %>
   </p>
 	<% f.fields_for :gifts do |builder| %>
-	<p>
-		<%= builder.label :name, "Gift name:" %>
-		<%= builder.text_field :name %><br/>
-		<%= builder.label :price, "Price:" %>
-		<%= builder.text_field :price %><br/>
-		<%= builder.label :total_donations, "Donations:" %>
-		<%= builder.text_field :total_donations %>
-	</p>
+		<%= render 'gift_fields', :f => builder %>
 	<% end %>
-
+	<p><%= link_to_add_fields "Add Gift", f, :gifts %>
   <p><%= f.submit %></p>
 <% end %>
