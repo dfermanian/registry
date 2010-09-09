@@ -23,18 +23,7 @@
 
     </div>
 
-	<% # unless current_user.facebook_session.user.has_permission? "publish_stream" %>
-	  <% #javascript_tag do %>
-	    /*function permission_ondone(result)
-	    {
-	       if(result == "") {
-	          document.setLocation('<%= fb_about_url %>');
-	       }
-	    }
-	    //Facebook.showPermissionDialog('publish_stream', permission_ondone, false);
-	*/
-	  <% #end %>
-	<% #end %>
+	<%= fb_connect_javascript_tag %> <%= init_fb_connect "XFBML", {:js => :jquery , :app_settings => " { permsToRequestOnConnect : 'email' }"} %> <%= fb_login_button('window.location = \''+ url_for(:action => 'facebook') + '\'') %>
 
 
   </body>
