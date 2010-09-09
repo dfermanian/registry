@@ -28,7 +28,7 @@ class DonationsController < ApplicationController
     if !@donation.express_token.blank?
       if @donation.submit_donation
         render :action => "success"
-        debugger
+        flash[:notice] = "<b>lawlz</b>"
       else
         render :action => "failure"
       end
