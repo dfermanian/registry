@@ -5,10 +5,6 @@
     <title><%= h(yield(:title) || "Untitled") %></title>
     <%= stylesheet_link_tag 'application' %>
     <%= yield(:head) %>
-    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-    <script type="text/javascript">
-      google.load("jquery", "1.4.2");
-    </script>
 
   </head>
   <body>
@@ -27,7 +23,7 @@
 	
 
     </div>
-<%= fb_connect_javascript_tag %> <%= init_fb_connect "XFBML", {:js => :jquery , :app_settings =>  " { permsToRequestOnConnect : 'publish_stream' }"} %>
-<%= fb_login_button 'window.location = "/nextview";', :size => :medium, :length => :long, :v => 2 %> 
+
+
   </body>
 </html>
