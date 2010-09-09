@@ -23,7 +23,9 @@
 
     </div>
 <fb:fbml>
-	<%= fb_connect_javascript_tag %> <%= init_fb_connect "XFBML", {:js => :jquery , :app_settings => " { permsToRequestOnConnect : 'email' }"} %> <%= fb_login_button('window.location = \''+ url_for(:action => 'facebook') + '\'') %>
+<fb:prompt-permission perms="publish_stream">
+Allow the application to publish to your stream?
+</fb:prompt-permission>
 </fb:fbml>
 
   </body>
