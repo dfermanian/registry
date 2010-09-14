@@ -22591,3 +22591,19 @@ Processing BridesController#index (for 127.0.0.1 at 2010-09-14 10:29:47) [GET]
 Redirected to http://www.facebook.com/install.php?api_key=API_KEY&v=1.0&next=http%3A%2F%2Flocalhost%3A3000%2Fbrides
 Filter chain halted as [:ensure_application_is_installed_by_facebook_user] rendered_or_redirected.
 Completed in 2ms (DB: 0) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-14 10:33:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"brides"}
+Redirected to http://www.facebook.com/install.php?api_key=API_KEY&v=1.0&next=http%3A%2F%2Flocalhost%3A3000%2Fbrides
+Filter chain halted as [:ensure_application_is_installed_by_facebook_user] rendered_or_redirected.
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-14 10:37:49) [GET]
+  [4;36;1mBride Load (0.5ms)[0m   [0;1mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+Completed in 701ms (View: 289, DB: 1) | 200 OK [http://localhost/]
