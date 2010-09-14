@@ -14,6 +14,7 @@
 	<% end %>
 
 <p>
+	<%= link_to "Invite your friends to donate!", :controller => :invitations, :action => :new %><br>
   <%= link_to "Edit", edit_bride_path(@bride) %> |
   <%= link_to "Destroy", @bride, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", brides_path %>
