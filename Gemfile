@@ -10,6 +10,7 @@ gem "devise", "1.0.8"
 gem "devise_facebook_connectable"
 gem "mysql"
 
+
 group :development do
   # bundler requires these gems in development
   gem 'rails-footnotes'
