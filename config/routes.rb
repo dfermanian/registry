@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :hellos
-  map.resources :donations, :new => { :create_express => :get }
+    map.devise_for :users
+   map.resources :donations, :member => { :paypal_response => :get }
 
    map.resources :brides
 

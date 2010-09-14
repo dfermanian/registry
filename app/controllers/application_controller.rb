@@ -16,7 +16,11 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery  :secret => 'a7cabcdf1499df9ded55d8a3797d9387'
   ensure_authenticated_to_facebook
-  
+
+
+  ensure_application_is_installed_by_facebook_user
+
+  filter_parameter_logging :fb_sig_friends
   
 	helper_attr :current_user
   

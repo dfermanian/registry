@@ -24,26 +24,33 @@ class DonationsController < ApplicationController
   def create
     @donation = Donation.new(params[:donation])
     @donation.ip_address = request.remote_ip
-    @donation.save
-    if !@donation.express_token.blank?
-      if @donation.submit_donation
-        render :action => "success"
-        flash[:notice] = "<b>lawlz</b>"
+    (params[:commit] == "paypal_express")? @donation.paypal_donation = true : @donation.paypal_donation = false
+    if @donation.save
+      unless @donation.paypal_donation
+        if @donation.submit_donation
+          render :action => "success"
+        else
+          render :action => "failure"
+        end
       else
-        render :action => "failure"
-      end
-    else
-      if @donation.save
-        if params[:commit] = "paypal_express"
-          @donation.paypal_donation = true
-          @donation.save
-          response = EXPRESS_GATEWAY.setup_purchase( 0,
+        response = EXPRESS_GATEWAY.setup_purchase( 0,
             :ip => request.remote_ip,
-            :return_url => new_donation_url(:amount => @donation.amount, :paypal_donation => true, :gift_id => @donation.gift_id),
+            :return_url => paypal_response_donation_url(@donation),
             :cancel_return_url => brides_url)
           redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
-        end
       end
+    end
+  end
+  
+  def paypal_response
+    @donation = Donation.find(params[:id])
+    @donation.express_token = params[:token]
+    @donation.express_payer_id = params[:PayerID]
+    @donation.save
+    if @donation.submit_donation
+      redirect_to bride_url(@donation.gift.bride_id)
+    else
+      render :action => "failure"
     end
   end
 
