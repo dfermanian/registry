@@ -48,7 +48,7 @@ class DonationsController < ApplicationController
     @donation.express_payer_id = params[:PayerID]
     @donation.save
     if @donation.submit_donation
-      redirect_to @donation
+      redirect_to bride_url(@donation.gift.bride_id)
     else
       render :action => "failure"
     end

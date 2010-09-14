@@ -21340,3 +21340,1254 @@ Rendered gifts/_gift_listing (22.6ms)
   [4;36;1mDonationTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 55) [0m
 Rendered gifts/_gift_listing (7.0ms)
 Completed in 142ms (View: 123, DB: 13) | 200 OK [http://localhost/brides/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:32:31) [GET]
+  Parameters: {"gift_id"=>"3"}
+  [4;36;1mDonation Columns (25.5ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (118.6ms)
+Completed in 159ms (View: 125, DB: 26) | 200 OK [http://localhost/donations/new?gift_id=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:34:00) [GET]
+  Parameters: {"gift_id"=>"3"}
+  [4;36;1mDonation Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (8.7ms)
+Completed in 26ms (View: 15, DB: 3) | 200 OK [http://localhost/donations/new?gift_id=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-09 13:36:50) [GET]
+  [4;36;1mBride Load (0.4ms)[0m   [0;1mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;35;1mBride Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:36:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBride Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.3ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;35;1mGift Load (0.9ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 1) [0m
+  [4;36;1mGift Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mDonation Load (0.4ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 5) [0m
+Rendered gifts/_gift_listing (8.0ms)
+  [4;36;1mDonation Load (0.3ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 6) [0m
+Rendered gifts/_gift_listing (1.4ms)
+Completed in 38ms (View: 26, DB: 6) | 200 OK [http://localhost/brides/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#edit (for 127.0.0.1 at 2010-09-09 13:36:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBride Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.3ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering brides/edit
+  [4;36;1mGift Load (0.4ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 1) [0m
+  [4;35;1mGift Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+Rendered brides/_gift_fields (2.4ms)
+Rendered brides/_gift_fields (2.7ms)
+Rendered brides/_gift_fields (1.8ms)
+Rendered brides/_form (65.6ms)
+Completed in 106ms (View: 96, DB: 4) | 200 OK [http://localhost/brides/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#update (for 127.0.0.1 at 2010-09-09 13:37:04) [PUT]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "id"=>"1", "bride"=>{"name"=>"Barbie", "wedding_day(1i)"=>"2010", "wedding_day(2i)"=>"9", "wedding_day(3i)"=>"7", "wedding_day(4i)"=>"00", "gifts_attributes"=>{"1284064619325"=>{"price"=>"123", "name"=>"gg", "_destroy"=>""}, "0"=>{"price"=>"700", "name"=>"iPhone", "id"=>"5", "_destroy"=>"1"}, "1"=>{"price"=>"89", "name"=>"plates", "id"=>"6", "_destroy"=>"1"}}, "wedding_day(5i)"=>"00"}}
+  [4;35;1mBride Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.4ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 1) [0m
+  [4;35;1mGift Load (0.4ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.`id` IN ('5','6')) AND (`gifts`.bride_id = 1) [0m
+  [4;36;1mGift Columns (4.6ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mGift Destroy (0.3ms)[0m   [0;1mDELETE FROM `gifts` WHERE `id` = 5[0m
+  [4;35;1mGift Load (0.3ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 1) [0m
+  [4;36;1mGift Destroy (0.2ms)[0m   [0;1mDELETE FROM `gifts` WHERE `id` = 6[0m
+  [4;35;1mGift Create (0.2ms)[0m   [0mINSERT INTO `gifts` (`name`, `price`, `created_at`, `updated_at`, `bride_id`, `total_donations`) VALUES('gg', 123.0, '2010-09-09 20:37:04', '2010-09-09 20:37:04', 1, NULL)[0m
+  [4;36;1mSQL (48.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/brides/1
+Completed in 78ms (DB: 57) | 302 Found [http://localhost/brides/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:37:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBride Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.3ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (0.3ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 1) [0m
+  [4;35;1mGift Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 7) [0m
+Rendered gifts/_gift_listing (5.8ms)
+Completed in 30ms (View: 19, DB: 5) | 200 OK [http://localhost/brides/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:37:08) [GET]
+  Parameters: {"gift_id"=>"7"}
+  [4;36;1mDonation Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (8.0ms)
+Completed in 22ms (View: 11, DB: 3) | 200 OK [http://localhost/donations/new?gift_id=7]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#create (for 127.0.0.1 at 2010-09-09 13:37:17) [POST]
+  Parameters: {"commit"=>"paypal_express", "commit.x"=>"76", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "commit.y"=>"12", "donation"=>{"gift_id"=>"7", "amount"=>"123", "last_name"=>"ggg", "first_name"=>"freddy"}}
+  [4;36;1mDonation Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.3ms)[0m   [0;1mINSERT INTO `donations` (`gift_id`, `card_expiration`, `created_at`, `card_type`, `express_payer_id`, `express_token`, `updated_at`, `amount`, `last_name`, `ip_address`, `first_name`, `paypal_donation`) VALUES(7, NULL, '2010-09-09 20:37:17', NULL, NULL, NULL, '2010-09-09 20:37:17', 123.0, 'ggg', '127.0.0.1', 'freddy', 1)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-4E553222UX487961K
+Completed in 1698ms (DB: 4) | 302 Found [http://localhost/donations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#paypal_response (for 127.0.0.1 at 2010-09-09 13:37:51) [GET]
+  Parameters: {"token"=>"EC-4E553222UX487961K", "id"=>"57", "PayerID"=>"WR7XWRYN233AL"}
+  [4;35;1mDonation Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonation Load (0.3ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.`id` = 57) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Update (0.3ms)[0m   [0;1mUPDATE `donations` SET `updated_at` = '2010-09-09 20:37:51', `express_token` = 'EC-4E553222UX487961K', `express_payer_id` = 'WR7XWRYN233AL' WHERE `id` = 57[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDonationTransaction Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonationTransaction Create (1.1ms)[0m   [0;1mINSERT INTO `donation_transactions` (`created_at`, `updated_at`, `action`, `amount`, `authorization`, `success`, `donation_id`, `params`, `message`) VALUES('2010-09-09 20:37:54', '2010-09-09 20:37:54', 'submit_express_donation', 12300.0, '0J913217J9088130U', 1, 57, '--- \npayment_status: Completed\ntax_amount_currency_id: USD\ntimestamp: \"2010-09-09T20:37:55Z\"\ncorrelation_id: 1e39c018a53b6\npending_reason: none\ntoken: EC-4E553222UX487961K\ntransaction_id: 0J913217J9088130U\nbuild: \"1496296\"\ntransaction_type: express-checkout\ntax_amount: \"0.00\"\nfee_amount_currency_id: USD\nreceipt_id: \nversion: \"59.0\"\ngross_amount_currency_id: USD\nfee_amount: \"3.87\"\nparent_transaction_id: \nexchange_rate: \ngross_amount: \"123.00\"\nack: Success\npayment_date: \"2010-09-09T20:37:54Z\"\nprotection_eligibility: Eligible\npayment_type: instant\nreason_code: none\n', 'Success')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/donations/57
+Completed in 3069ms (DB: 9) | 302 Found [http://localhost/donations/57/paypal_response?token=EC-4E553222UX487961K&PayerID=WR7XWRYN233AL]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#show (for 127.0.0.1 at 2010-09-09 13:37:54) [GET]
+  Parameters: {"id"=>"57"}
+  [4;35;1mDonation Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonation Load (0.3ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.`id` = 57) [0m
+Rendering template within layouts/application
+Rendering donations/show
+Completed in 18ms (View: 9, DB: 2) | 200 OK [http://localhost/donations/57]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-09 13:38:03) [GET]
+  [4;36;1mBride Load (0.4ms)[0m   [0;1mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;35;1mBride Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+Completed in 20ms (View: 11, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:38:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBride Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.5ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;35;1mGift Load (1.8ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;36;1mGift Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mDonation Load (0.5ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 3) [0m
+  [4;36;1mDonation Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonationTransaction Load (0.4ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 48) [0m
+  [4;36;1mDonationTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 50) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 56) [0m
+Rendered gifts/_gift_listing (16.4ms)
+  [4;36;1mDonation Load (0.5ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 4) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 49) [0m
+  [4;36;1mDonationTransaction Load (0.9ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 51) [0m
+  [4;35;1mDonationTransaction Load (0.4ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 52) [0m
+  [4;36;1mDonationTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 53) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 54) [0m
+  [4;36;1mDonationTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 55) [0m
+Rendered gifts/_gift_listing (8.8ms)
+Completed in 51ms (View: 33, DB: 12) | 200 OK [http://localhost/brides/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:38:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBride Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.3ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (0.5ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;35;1mGift Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 3) [0m
+  [4;35;1mDonation Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonationTransaction Load (0.6ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 48) [0m
+  [4;35;1mDonationTransaction Load (0.5ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 50) [0m
+  [4;36;1mDonationTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 56) [0m
+Rendered gifts/_gift_listing (18.5ms)
+  [4;35;1mDonation Load (0.5ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 4) [0m
+  [4;36;1mDonationTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 49) [0m
+  [4;35;1mDonationTransaction Load (0.2ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 51) [0m
+  [4;36;1mDonationTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 52) [0m
+  [4;35;1mDonationTransaction Load (0.2ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 53) [0m
+  [4;36;1mDonationTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 54) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 55) [0m
+Rendered gifts/_gift_listing (7.7ms)
+Completed in 130ms (View: 113, DB: 10) | 200 OK [http://localhost/brides/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-09 13:38:15) [GET]
+  [4;35;1mBride Load (0.4ms)[0m   [0mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;36;1mBride Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+Completed in 18ms (View: 10, DB: 2) | 200 OK [http://localhost/brides]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:38:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBride Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.3ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (1.2ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 1) [0m
+  [4;35;1mGift Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 7) [0m
+  [4;35;1mDonation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonationTransaction Load (0.6ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 57) [0m
+Rendered gifts/_gift_listing (16.9ms)
+Completed in 43ms (View: 28, DB: 8) | 200 OK [http://localhost/brides/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:38:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBride Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.4ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (0.4ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 1) [0m
+  [4;35;1mGift Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (0.5ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 7) [0m
+  [4;35;1mDonation Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonationTransaction Load (0.5ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 57) [0m
+Rendered gifts/_gift_listing (98.5ms)
+Completed in 132ms (View: 118, DB: 8) | 200 OK [http://localhost/brides/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:51:30) [GET]
+  Parameters: {"gift_id"=>"7"}
+  [4;36;1mDonation Columns (45.8ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (34.1ms)
+Completed in 124ms (View: 69, DB: 46) | 200 OK [http://localhost/donations/new?gift_id=7]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#create (for 127.0.0.1 at 2010-09-09 13:51:33) [POST]
+  Parameters: {"commit"=>"paypal_express", "commit.x"=>"100", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "commit.y"=>"16", "donation"=>{"gift_id"=>"7", "amount"=>"", "last_name"=>"", "first_name"=>""}}
+  [4;36;1mDonation Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActionView::MissingTemplate (Missing template donations/create.erb in view path app/views):
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:51:55) [GET]
+  Parameters: {"gift_id"=>"7"}
+  [4;36;1mDonation Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (8.8ms)
+Completed in 28ms (View: 16, DB: 3) | 200 OK [http://localhost/donations/new?gift_id=7]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#create (for 127.0.0.1 at 2010-09-09 13:51:57) [POST]
+  Parameters: {"commit"=>"paypal_express", "commit.x"=>"63", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "commit.y"=>"10", "donation"=>{"gift_id"=>"7", "amount"=>"", "last_name"=>"", "first_name"=>""}}
+  [4;36;1mDonation Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+ActionView::MissingTemplate (Missing template donations/create.erb in view path app/views):
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-09 13:52:35) [GET]
+  [4;36;1mBride Load (0.4ms)[0m   [0;1mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;35;1mBride Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+Completed in 52ms (View: 45, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:52:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBride Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.3ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;35;1mGift Load (0.4ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 1) [0m
+  [4;36;1mGift Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mDonation Load (0.4ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 7) [0m
+  [4;36;1mDonation Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonationTransaction Load (0.4ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 57) [0m
+Rendered gifts/_gift_listing (15.7ms)
+Completed in 42ms (View: 28, DB: 9) | 200 OK [http://localhost/brides/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:52:38) [GET]
+  Parameters: {"gift_id"=>"7"}
+  [4;35;1mDonation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (9.5ms)
+Completed in 106ms (View: 16, DB: 2) | 200 OK [http://localhost/donations/new?gift_id=7]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#create (for 127.0.0.1 at 2010-09-09 13:52:44) [POST]
+  Parameters: {"commit"=>"paypal_express", "commit.x"=>"68", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "commit.y"=>"3", "donation"=>{"gift_id"=>"7", "amount"=>"23", "last_name"=>"dd", "first_name"=>"ff"}}
+  [4;35;1mDonation Columns (27.1ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (28.7ms)[0m   [0mINSERT INTO `donations` (`gift_id`, `card_expiration`, `created_at`, `card_type`, `express_payer_id`, `express_token`, `updated_at`, `amount`, `last_name`, `ip_address`, `first_name`, `paypal_donation`) VALUES(7, NULL, '2010-09-09 20:52:44', NULL, NULL, NULL, '2010-09-09 20:52:44', 23.0, 'dd', '127.0.0.1', 'ff', 1)[0m
+  [4;36;1mSQL (91.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-63718177PT102545E
+Completed in 878ms (DB: 147) | 302 Found [http://localhost/donations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#create (for 127.0.0.1 at 2010-09-09 13:53:12) [POST]
+  Parameters: {"commit"=>"paypal_express", "commit.x"=>"74", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "commit.y"=>"24", "donation"=>{"gift_id"=>"7", "amount"=>"23", "last_name"=>"dd", "first_name"=>"ff"}}
+  [4;36;1mDonation Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.3ms)[0m   [0;1mINSERT INTO `donations` (`gift_id`, `card_expiration`, `created_at`, `card_type`, `express_payer_id`, `express_token`, `updated_at`, `amount`, `last_name`, `ip_address`, `first_name`, `paypal_donation`) VALUES(7, NULL, '2010-09-09 20:53:12', NULL, NULL, NULL, '2010-09-09 20:53:12', 23.0, 'dd', '127.0.0.1', 'ff', 1)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-0U581179A6741711W
+Completed in 649ms (DB: 3) | 302 Found [http://localhost/donations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#paypal_response (for 127.0.0.1 at 2010-09-09 13:53:29) [GET]
+  Parameters: {"token"=>"EC-0U581179A6741711W", "id"=>"59", "PayerID"=>"WR7XWRYN233AL"}
+  [4;35;1mDonation Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonation Load (0.3ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.`id` = 59) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Update (0.4ms)[0m   [0;1mUPDATE `donations` SET `updated_at` = '2010-09-09 20:53:29', `express_token` = 'EC-0U581179A6741711W', `express_payer_id` = 'WR7XWRYN233AL' WHERE `id` = 59[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDonationTransaction Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonationTransaction Create (0.4ms)[0m   [0;1mINSERT INTO `donation_transactions` (`created_at`, `updated_at`, `action`, `amount`, `authorization`, `success`, `donation_id`, `params`, `message`) VALUES('2010-09-09 20:53:32', '2010-09-09 20:53:32', 'submit_express_donation', 2300.0, '30757134VY3790005', 1, 59, '--- \npayment_status: Completed\ntax_amount_currency_id: USD\ntimestamp: \"2010-09-09T20:53:33Z\"\ncorrelation_id: d8352bad86854\npending_reason: none\ntoken: EC-0U581179A6741711W\ntransaction_id: 30757134VY3790005\nbuild: \"1496296\"\ntransaction_type: express-checkout\ntax_amount: \"0.00\"\nfee_amount_currency_id: USD\nreceipt_id: \nversion: \"59.0\"\ngross_amount_currency_id: USD\nfee_amount: \"0.97\"\nparent_transaction_id: \nexchange_rate: \ngross_amount: \"23.00\"\nack: Success\npayment_date: \"2010-09-09T20:53:32Z\"\nprotection_eligibility: Eligible\npayment_type: instant\nreason_code: none\n', 'Success')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/donations/59
+Completed in 3564ms (DB: 9) | 302 Found [http://localhost/donations/59/paypal_response?token=EC-0U581179A6741711W&PayerID=WR7XWRYN233AL]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#show (for 127.0.0.1 at 2010-09-09 13:53:32) [GET]
+  Parameters: {"id"=>"59"}
+  [4;35;1mDonation Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonation Load (1.3ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.`id` = 59) [0m
+Rendering template within layouts/application
+Rendering donations/show
+Completed in 19ms (View: 9, DB: 4) | 200 OK [http://localhost/donations/59]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#show (for 127.0.0.1 at 2010-09-09 13:54:38) [GET]
+  Parameters: {"id"=>"59"}
+  [4;36;1mDonation Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonation Load (0.4ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.`id` = 59) [0m
+Rendering template within layouts/application
+Rendering donations/show
+Completed in 18ms (View: 8, DB: 3) | 200 OK [http://localhost/donations/59]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-09 13:54:42) [GET]
+  [4;35;1mBride Load (0.4ms)[0m   [0mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;36;1mBride Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+Completed in 19ms (View: 11, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:54:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBride Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.3ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (0.5ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;35;1mGift Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 3) [0m
+  [4;35;1mDonation Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonationTransaction Load (0.5ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 48) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 50) [0m
+  [4;36;1mDonationTransaction Load (0.5ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 56) [0m
+Rendered gifts/_gift_listing (19.6ms)
+  [4;35;1mDonation Load (0.3ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 4) [0m
+  [4;36;1mDonationTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 49) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 51) [0m
+  [4;36;1mDonationTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 52) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 53) [0m
+  [4;36;1mDonationTransaction Load (0.2ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 54) [0m
+  [4;35;1mDonationTransaction Load (0.2ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 55) [0m
+Rendered gifts/_gift_listing (6.8ms)
+Completed in 52ms (View: 34, DB: 12) | 200 OK [http://localhost/brides/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:54:45) [GET]
+  Parameters: {"gift_id"=>"3"}
+  [4;35;1mDonation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (7.5ms)
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://localhost/donations/new?gift_id=3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:54:48) [GET]
+  Parameters: {"gift_id"=>"3"}
+  [4;35;1mDonation Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (7.1ms)
+Completed in 22ms (View: 10, DB: 3) | 200 OK [http://localhost/donations/new?gift_id=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#edit (for 127.0.0.1 at 2010-09-09 13:54:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBride Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.3ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering brides/edit
+  [4;35;1mGift Load (0.7ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;36;1mGift Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+Rendered brides/_gift_fields (2.3ms)
+Rendered brides/_gift_fields (2.1ms)
+Rendered brides/_gift_fields (3.6ms)
+Rendered brides/_form (127.4ms)
+Completed in 140ms (View: 129, DB: 5) | 200 OK [http://localhost/brides/2/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#update (for 127.0.0.1 at 2010-09-09 13:55:00) [PUT]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "id"=>"2", "bride"=>{"name"=>"j", "wedding_day(1i)"=>"2010", "wedding_day(2i)"=>"9", "wedding_day(3i)"=>"9", "wedding_day(4i)"=>"00", "gifts_attributes"=>{"1284065694862"=>{"price"=>"", "name"=>"", "_destroy"=>"1"}, "0"=>{"price"=>"500", "name"=>"iPhone", "id"=>"3", "_destroy"=>"1"}, "1"=>{"price"=>"800", "name"=>"bag", "id"=>"4", "_destroy"=>"1"}, "1284065696193"=>{"price"=>"123", "name"=>"f", "_destroy"=>""}}, "wedding_day(5i)"=>"00"}}
+  [4;36;1mBride Columns (17.3ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (2.8ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+  [4;36;1mGift Load (1.2ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.`id` IN ('3','4')) AND (`gifts`.bride_id = 2) [0m
+  [4;35;1mGift Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGift Destroy (0.3ms)[0m   [0mDELETE FROM `gifts` WHERE `id` = 3[0m
+  [4;36;1mGift Load (0.2ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;35;1mGift Destroy (0.2ms)[0m   [0mDELETE FROM `gifts` WHERE `id` = 4[0m
+  [4;36;1mGift Create (0.2ms)[0m   [0;1mINSERT INTO `gifts` (`name`, `price`, `created_at`, `updated_at`, `bride_id`, `total_donations`) VALUES('f', 123.0, '2010-09-09 20:55:00', '2010-09-09 20:55:00', 2, NULL)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/brides/2
+Completed in 47ms (DB: 26) | 302 Found [http://localhost/brides/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:55:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBride Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.3ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;35;1mGift Load (1.0ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;36;1mGift Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mDonation Load (0.4ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 8) [0m
+Rendered gifts/_gift_listing (6.1ms)
+Completed in 33ms (View: 20, DB: 6) | 200 OK [http://localhost/brides/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:55:01) [GET]
+  Parameters: {"gift_id"=>"8"}
+  [4;35;1mDonation Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (7.4ms)
+Completed in 103ms (View: 11, DB: 3) | 200 OK [http://localhost/donations/new?gift_id=8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#create (for 127.0.0.1 at 2010-09-09 13:55:06) [POST]
+  Parameters: {"commit"=>"paypal_express", "commit.x"=>"85", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "commit.y"=>"2", "donation"=>{"gift_id"=>"8", "amount"=>"12", "last_name"=>"d", "first_name"=>"frederick"}}
+  [4;35;1mDonation Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.3ms)[0m   [0mINSERT INTO `donations` (`gift_id`, `card_expiration`, `created_at`, `card_type`, `express_payer_id`, `express_token`, `updated_at`, `amount`, `last_name`, `ip_address`, `first_name`, `paypal_donation`) VALUES(8, NULL, '2010-09-09 20:55:06', NULL, NULL, NULL, '2010-09-09 20:55:06', 12.0, 'd', '127.0.0.1', 'frederick', 1)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6LW78988C0159283N
+Completed in 701ms (DB: 4) | 302 Found [http://localhost/donations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#paypal_response (for 127.0.0.1 at 2010-09-09 13:55:22) [GET]
+  Parameters: {"token"=>"EC-6LW78988C0159283N", "id"=>"60", "PayerID"=>"WR7XWRYN233AL"}
+  [4;36;1mDonation Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonation Load (0.3ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.`id` = 60) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Update (0.3ms)[0m   [0mUPDATE `donations` SET `updated_at` = '2010-09-09 20:55:22', `express_token` = 'EC-6LW78988C0159283N', `express_payer_id` = 'WR7XWRYN233AL' WHERE `id` = 60[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mDonationTransaction Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonationTransaction Create (0.3ms)[0m   [0mINSERT INTO `donation_transactions` (`created_at`, `updated_at`, `action`, `amount`, `authorization`, `success`, `donation_id`, `params`, `message`) VALUES('2010-09-09 20:55:25', '2010-09-09 20:55:25', 'submit_express_donation', 1200.0, '1VM406131S3864143', 1, 60, '--- \npayment_status: Completed\ntax_amount_currency_id: USD\ntimestamp: \"2010-09-09T20:55:26Z\"\ncorrelation_id: 52c7d8bb449d\npending_reason: none\ntoken: EC-6LW78988C0159283N\ntransaction_id: 1VM406131S3864143\nbuild: \"1496296\"\ntransaction_type: express-checkout\ntax_amount: \"0.00\"\nfee_amount_currency_id: USD\nreceipt_id: \nversion: \"59.0\"\ngross_amount_currency_id: USD\nfee_amount: \"0.65\"\nparent_transaction_id: \nexchange_rate: \ngross_amount: \"12.00\"\nack: Success\npayment_date: \"2010-09-09T20:55:25Z\"\nprotection_eligibility: Eligible\npayment_type: instant\nreason_code: none\n', 'Success')[0m
+  [4;36;1mSQL (22.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGift Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mGift Load (0.3ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.`id` = 8) [0m
+Redirected to http://localhost:3000/brides.2
+Completed in 3099ms (DB: 32) | 302 Found [http://localhost/donations/60/paypal_response?token=EC-6LW78988C0159283N&PayerID=WR7XWRYN233AL]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index to 2 (for 127.0.0.1 at 2010-09-09 13:55:25) [GET]
+  [4;36;1mBride Load (0.4ms)[0m   [0;1mSELECT * FROM `brides` [0m
+
+ActionView::MissingTemplate (Missing template brides/index.erb in view path app/views):
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index to 2 (for 127.0.0.1 at 2010-09-09 13:55:46) [GET]
+  [4;36;1mBride Load (0.4ms)[0m   [0;1mSELECT * FROM `brides` [0m
+
+ActionView::MissingTemplate (Missing template brides/index.erb in view path app/views):
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/FreddyHernandezJr/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#create (for 127.0.0.1 at 2010-09-09 13:55:57) [POST]
+  Parameters: {"commit"=>"paypal_express", "commit.x"=>"91", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "commit.y"=>"23", "donation"=>{"gift_id"=>"8", "amount"=>"12", "last_name"=>"d", "first_name"=>"frederick"}}
+  [4;36;1mDonation Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.3ms)[0m   [0;1mINSERT INTO `donations` (`gift_id`, `card_expiration`, `created_at`, `card_type`, `express_payer_id`, `express_token`, `updated_at`, `amount`, `last_name`, `ip_address`, `first_name`, `paypal_donation`) VALUES(8, NULL, '2010-09-09 20:55:57', NULL, NULL, NULL, '2010-09-09 20:55:57', 12.0, 'd', '127.0.0.1', 'frederick', 1)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-9KF82397EP345543G
+Completed in 737ms (DB: 3) | 302 Found [http://localhost/donations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#paypal_response (for 127.0.0.1 at 2010-09-09 13:56:14) [GET]
+  Parameters: {"token"=>"EC-9KF82397EP345543G", "id"=>"61", "PayerID"=>"WR7XWRYN233AL"}
+  [4;35;1mDonation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.`id` = 61) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Update (0.4ms)[0m   [0;1mUPDATE `donations` SET `updated_at` = '2010-09-09 20:56:14', `express_token` = 'EC-9KF82397EP345543G', `express_payer_id` = 'WR7XWRYN233AL' WHERE `id` = 61[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDonationTransaction Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonationTransaction Create (1.4ms)[0m   [0;1mINSERT INTO `donation_transactions` (`created_at`, `updated_at`, `action`, `amount`, `authorization`, `success`, `donation_id`, `params`, `message`) VALUES('2010-09-09 20:56:17', '2010-09-09 20:56:17', 'submit_express_donation', 1200.0, '4UL26421Y03489742', 1, 61, '--- \npayment_status: Completed\ntax_amount_currency_id: USD\ntimestamp: \"2010-09-09T20:56:18Z\"\ncorrelation_id: ac86512731aaf\npending_reason: none\ntoken: EC-9KF82397EP345543G\ntransaction_id: 4UL26421Y03489742\nbuild: \"1496296\"\ntransaction_type: express-checkout\ntax_amount: \"0.00\"\nfee_amount_currency_id: USD\nreceipt_id: \nversion: \"59.0\"\ngross_amount_currency_id: USD\nfee_amount: \"0.65\"\nparent_transaction_id: \nexchange_rate: \ngross_amount: \"12.00\"\nack: Success\npayment_date: \"2010-09-09T20:56:17Z\"\nprotection_eligibility: Eligible\npayment_type: instant\nreason_code: none\n', 'Success')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mGift Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mGift Load (0.3ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.`id` = 8) [0m
+Redirected to http://localhost:3000/brides/2
+Completed in 3696ms (DB: 10) | 302 Found [http://localhost/donations/61/paypal_response?token=EC-9KF82397EP345543G&PayerID=WR7XWRYN233AL]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 13:56:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBride Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.3ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;35;1mGift Load (0.5ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;36;1mGift Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mDonation Load (0.4ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 8) [0m
+  [4;36;1mDonation Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonationTransaction Load (0.5ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 60) [0m
+  [4;36;1mDonationTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 61) [0m
+Rendered gifts/_gift_listing (17.2ms)
+Completed in 128ms (View: 114, DB: 8) | 200 OK [http://localhost/brides/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-09 13:57:27) [GET]
+  Parameters: {"gift_id"=>"8"}
+  [4;36;1mDonation Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (34.3ms)
+Completed in 118ms (View: 107, DB: 3) | 200 OK [http://localhost/donations/new?gift_id=8]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mDonation Load (0.6ms)[0m   [0mSELECT * FROM `donations` [0m
+  [4;36;1mDonation Columns (14.7ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonationTransaction Load (0.8ms)[0m   [0mSELECT * FROM `donation_transactions` [0m
+  [4;36;1mDonationTransaction Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mDonationTransaction Load (0.9ms)[0m   [0mSELECT * FROM `donation_transactions` LIMIT 1[0m
+  [4;36;1mSQL (116.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mDonationTransaction Load (0.5ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.`id` = '--- :second\n') [0m
+  [4;35;1mDonationTransaction Load (1.0ms)[0m   [0mSELECT * FROM `donation_transactions` [0m
+  [4;36;1mDonationTransaction Load (0.5ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.`id` = 23) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-09 14:07:19) [GET]
+  [4;36;1mBride Load (24.8ms)[0m   [0;1mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;35;1mBride Columns (39.8ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+Completed in 162ms (View: 50, DB: 65) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#index (for 127.0.0.1 at 2010-09-09 14:07:24) [GET]
+  [4;35;1mDonation Load (0.5ms)[0m   [0mSELECT * FROM `donations` [0m
+Rendering template within layouts/application
+Rendering donations/index
+  [4;36;1mDonation Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Completed in 163ms (View: 154, DB: 3) | 200 OK [http://localhost/donations]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#paypal_response (for 127.0.0.1 at 2010-09-09 14:07:55) [GET]
+  Parameters: {"token"=>"EC-9KF82397EP345543G", "id"=>"61", "PayerID"=>"WR7XWRYN233AL"}
+  [4;36;1mDonation Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonation Load (0.3ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.`id` = 61) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDonationTransaction Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonationTransaction Create (0.3ms)[0m   [0;1mINSERT INTO `donation_transactions` (`created_at`, `updated_at`, `action`, `amount`, `authorization`, `success`, `donation_id`, `params`, `message`) VALUES('2010-09-09 21:07:56', '2010-09-09 21:07:56', 'submit_express_donation', 1200.0, NULL, 0, 61, '--- \ndo_express_checkout_payment_response_details: \ntimestamp: \"2010-09-09T21:07:56Z\"\ncorrelation_id: 367441dfcac27\nbuild: \"1496296\"\nerror_codes: \"10415\"\nversion: \"59.0\"\nack: Failure\nmessage: A successful transaction has already been completed for this token.\n', 'A successful transaction has already been completed for this token.')[0m
+  [4;35;1mSQL (41.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering donations/failure
+Completed in 1086ms (View: 43, DB: 47) | 200 OK [http://localhost/donations/61/paypal_response?token=EC-9KF82397EP345543G&PayerID=WR7XWRYN233AL]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#paypal_response (for 127.0.0.1 at 2010-09-09 14:08:07) [GET]
+  Parameters: {"token"=>"EC-9KF82397EP345543G", "id"=>"60", "PayerID"=>"WR7XWRYN233AL"}
+  [4;35;1mDonation Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonation Load (1.8ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.`id` = 60) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Update (0.3ms)[0m   [0;1mUPDATE `donations` SET `updated_at` = '2010-09-09 21:08:07', `express_token` = 'EC-9KF82397EP345543G' WHERE `id` = 60[0m
+  [4;35;1mSQL (30.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDonationTransaction Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonationTransaction Create (0.3ms)[0m   [0;1mINSERT INTO `donation_transactions` (`created_at`, `updated_at`, `action`, `amount`, `authorization`, `success`, `donation_id`, `params`, `message`) VALUES('2010-09-09 21:08:08', '2010-09-09 21:08:08', 'submit_express_donation', 1200.0, NULL, 0, 60, '--- \ndo_express_checkout_payment_response_details: \ntimestamp: \"2010-09-09T21:08:08Z\"\ncorrelation_id: 1073359ac5e32\nbuild: \"1496296\"\nerror_codes: \"10415\"\nversion: \"59.0\"\nack: Failure\nmessage: A successful transaction has already been completed for this token.\n', 'A successful transaction has already been completed for this token.')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering donations/failure
+Completed in 795ms (View: 3, DB: 40) | 200 OK [http://localhost/donations/60/paypal_response?token=EC-9KF82397EP345543G&PayerID=WR7XWRYN233AL]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#paypal_response (for 127.0.0.1 at 2010-09-09 14:08:11) [GET]
+  Parameters: {"token"=>"EC-9KF82397EP345543G", "id"=>"60", "PayerID"=>"WR7XWRYN233AL"}
+  [4;35;1mDonation Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonation Load (0.5ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.`id` = 60) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mDonationTransaction Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonationTransaction Create (162.8ms)[0m   [0mINSERT INTO `donation_transactions` (`created_at`, `updated_at`, `action`, `amount`, `authorization`, `success`, `donation_id`, `params`, `message`) VALUES('2010-09-09 21:08:11', '2010-09-09 21:08:11', 'submit_express_donation', 1200.0, NULL, 0, 60, '--- \ndo_express_checkout_payment_response_details: \ntimestamp: \"2010-09-09T21:08:12Z\"\ncorrelation_id: 6b3861cd3ee3e\nbuild: \"1496296\"\nerror_codes: \"10415\"\nversion: \"59.0\"\nack: Failure\nmessage: A successful transaction has already been completed for this token.\n', 'A successful transaction has already been completed for this token.')[0m
+  [4;36;1mSQL (17.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering donations/failure
+Completed in 968ms (View: 4, DB: 186) | 200 OK [http://localhost/donations/60/paypal_response?token=EC-9KF82397EP345543G&PayerID=WR7XWRYN233AL]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-09 14:09:50) [GET]
+  [4;36;1mBride Load (0.6ms)[0m   [0;1mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;35;1mBride Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+Completed in 18ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#new (for 127.0.0.1 at 2010-09-09 14:09:52) [GET]
+  [4;35;1mBride Columns (24.8ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mGift Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+Rendering template within layouts/application
+Rendering brides/new
+Rendered brides/_gift_fields (1.7ms)
+Rendered brides/_gift_fields (1.6ms)
+Rendered brides/_gift_fields (1.8ms)
+Rendered brides/_form (59.1ms)
+Completed in 131ms (View: 92, DB: 27) | 200 OK [http://localhost/brides/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-09 14:10:48) [GET]
+  [4;36;1mBride Load (0.4ms)[0m   [0;1mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;35;1mBride Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+Completed in 103ms (View: 12, DB: 3) | 200 OK [http://localhost/brides]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 14:11:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBride Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.6ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;35;1mGift Load (1.6ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 1) [0m
+  [4;36;1mGift Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mDonation Load (0.4ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 7) [0m
+  [4;36;1mDonation Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonationTransaction Load (0.5ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 57) [0m
+  [4;36;1mDonationTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 58) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 59) [0m
+Rendered gifts/_gift_listing (18.4ms)
+Completed in 44ms (View: 27, DB: 11) | 200 OK [http://localhost/brides/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-09 14:11:16) [GET]
+  [4;35;1mBride Load (0.4ms)[0m   [0mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;36;1mBride Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+Completed in 18ms (View: 11, DB: 3) | 200 OK [http://localhost/brides]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 14:11:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBride Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.3ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (1.8ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;35;1mGift Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 8) [0m
+  [4;35;1mDonation Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonationTransaction Load (0.5ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 60) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 61) [0m
+Rendered gifts/_gift_listing (16.5ms)
+Completed in 42ms (View: 26, DB: 10) | 200 OK [http://localhost/brides/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#edit (for 127.0.0.1 at 2010-09-09 14:11:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBride Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.3ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering brides/edit
+  [4;35;1mGift Load (0.4ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;36;1mGift Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+Rendered brides/_gift_fields (1.8ms)
+Rendered brides/_gift_fields (1.8ms)
+Rendered brides/_form (31.3ms)
+Completed in 44ms (View: 33, DB: 5) | 200 OK [http://localhost/brides/2/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#update (for 127.0.0.1 at 2010-09-09 14:11:25) [PUT]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"0V7Ky6J6n++EyjQrEscRbUk3J6fzX0Nq+zN/Z1xK8Tc=", "id"=>"2", "bride"=>{"name"=>"j", "wedding_day(1i)"=>"2010", "wedding_day(2i)"=>"9", "wedding_day(3i)"=>"9", "wedding_day(4i)"=>"00", "gifts_attributes"=>{"0"=>{"price"=>"123", "name"=>"f", "id"=>"8", "_destroy"=>""}, "1284066681281"=>{"price"=>"3232", "name"=>"ad", "_destroy"=>""}}, "wedding_day(5i)"=>"00"}}
+  [4;36;1mBride Columns (19.0ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (2.1ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+  [4;36;1mGift Load (0.4ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.`id` IN ('8')) AND (`gifts`.bride_id = 2) [0m
+  [4;35;1mGift Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGift Create (0.3ms)[0m   [0mINSERT INTO `gifts` (`name`, `price`, `created_at`, `updated_at`, `bride_id`, `total_donations`) VALUES('ad', 3232.0, '2010-09-09 21:11:25', '2010-09-09 21:11:25', 2, NULL)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/brides/2
+Completed in 46ms (DB: 24) | 302 Found [http://localhost/brides/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-09 14:11:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBride Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.3ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (0.4ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 2) [0m
+  [4;35;1mGift Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (0.5ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 8) [0m
+  [4;35;1mDonation Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonationTransaction Load (0.5ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 60) [0m
+  [4;35;1mDonationTransaction Load (0.3ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 61) [0m
+Rendered gifts/_gift_listing (17.8ms)
+  [4;36;1mDonation Load (0.3ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 9) [0m
+Rendered gifts/_gift_listing (1.6ms)
+Completed in 43ms (View: 27, DB: 10) | 200 OK [http://localhost/brides/2]
+  [4;36;1mSQL (103.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-10 00:32:55) [GET]
+  [4;35;1mBride Load (137.0ms)[0m   [0mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;36;1mBride Columns (92.0ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+Completed in 529ms (View: 192, DB: 333) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#new (for 127.0.0.1 at 2010-09-10 00:32:59) [GET]
+  [4;36;1mBride Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mGift Columns (42.9ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+Rendering template within layouts/application
+Rendering brides/new
+Rendered brides/_gift_fields (20.5ms)
+Rendered brides/_gift_fields (1.6ms)
+Rendered brides/_gift_fields (1.8ms)
+Rendered brides/_form (115.8ms)
+Completed in 359ms (View: 157, DB: 56) | 200 OK [http://localhost/brides/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#create (for 127.0.0.1 at 2010-09-10 00:33:27) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"oWI4ycYGJFoDYOxCr4yk1Oj01PHyvNRtadvNILrLjss=", "bride"=>{"name"=>"rebecca daniel", "wedding_day(1i)"=>"2010", "wedding_day(2i)"=>"9", "wedding_day(3i)"=>"10", "wedding_day(4i)"=>"07", "gifts_attributes"=>{"1284103991130"=>{"price"=>"9000", "name"=>"Diamond Ring", "_destroy"=>""}, "0"=>{"price"=>"", "name"=>"", "_destroy"=>"1"}, "1"=>{"price"=>"", "name"=>"", "_destroy"=>"1"}, "1284103992385"=>{"price"=>"", "name"=>"", "_destroy"=>"1"}}, "wedding_day(5i)"=>"32"}}
+  [4;35;1mBride Columns (5.5ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mGift Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBride Create (184.2ms)[0m   [0;1mINSERT INTO `brides` (`name`, `created_at`, `updated_at`, `wedding_day`) VALUES('rebecca daniel', '2010-09-10 07:33:27', '2010-09-10 07:33:27', '2010-09-10')[0m
+  [4;35;1mGift Create (33.6ms)[0m   [0mINSERT INTO `gifts` (`name`, `price`, `created_at`, `updated_at`, `bride_id`, `total_donations`) VALUES('Diamond Ring', 9000.0, '2010-09-10 07:33:27', '2010-09-10 07:33:27', 3, NULL)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/brides/3
+Completed in 261ms (DB: 238) | 302 Found [http://localhost/brides]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-10 00:33:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mBride Columns (6.1ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (57.1ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (0.4ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 3) [0m
+  [4;35;1mGift Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (36.3ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 10) [0m
+Rendered gifts/_gift_listing (85.3ms)
+Completed in 200ms (View: 90, DB: 102) | 200 OK [http://localhost/brides/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-10 00:33:32) [GET]
+  Parameters: {"gift_id"=>"10"}
+  [4;36;1mDonation Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (30.7ms)
+Completed in 135ms (View: 124, DB: 2) | 200 OK [http://localhost/donations/new?gift_id=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#create (for 127.0.0.1 at 2010-09-10 00:33:42) [POST]
+  Parameters: {"commit"=>"paypal_express", "commit.x"=>"63", "authenticity_token"=>"oWI4ycYGJFoDYOxCr4yk1Oj01PHyvNRtadvNILrLjss=", "commit.y"=>"14", "donation"=>{"gift_id"=>"10", "amount"=>"9000", "last_name"=>"money", "first_name"=>"fred"}}
+  [4;36;1mDonation Columns (55.0ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.4ms)[0m   [0;1mINSERT INTO `donations` (`gift_id`, `card_expiration`, `created_at`, `card_type`, `express_payer_id`, `express_token`, `updated_at`, `amount`, `last_name`, `ip_address`, `first_name`, `paypal_donation`) VALUES(10, NULL, '2010-09-10 07:33:42', NULL, NULL, NULL, '2010-09-10 07:33:42', 9000.0, 'money', '127.0.0.1', 'fred', 1)[0m
+  [4;35;1mSQL (17.4ms)[0m   [0mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-74W03347KR373374R
+Completed in 1231ms (DB: 73) | 302 Found [http://localhost/donations]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#paypal_response (for 127.0.0.1 at 2010-09-10 00:34:09) [GET]
+  Parameters: {"token"=>"EC-74W03347KR373374R", "id"=>"62", "PayerID"=>"WR7XWRYN233AL"}
+  [4;35;1mDonation Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.`id` = 62) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Update (0.4ms)[0m   [0;1mUPDATE `donations` SET `updated_at` = '2010-09-10 07:34:09', `express_token` = 'EC-74W03347KR373374R', `express_payer_id` = 'WR7XWRYN233AL' WHERE `id` = 62[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDonationTransaction Columns (42.4ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonationTransaction Create (0.4ms)[0m   [0;1mINSERT INTO `donation_transactions` (`created_at`, `updated_at`, `action`, `amount`, `authorization`, `success`, `donation_id`, `params`, `message`) VALUES('2010-09-10 07:34:12', '2010-09-10 07:34:12', 'submit_express_donation', 900000.0, '5GF11733W12006520', 1, 62, '--- \npayment_status: Completed\ntax_amount_currency_id: USD\ncorrelation_id: f3d9d1c4f899\ntimestamp: \"2010-09-10T07:34:12Z\"\npending_reason: none\ntoken: EC-74W03347KR373374R\ntransaction_id: 5GF11733W12006520\nbuild: \"1500373\"\ntax_amount: \"0.00\"\ntransaction_type: express-checkout\nfee_amount_currency_id: USD\nreceipt_id: \nversion: \"59.0\"\ngross_amount_currency_id: USD\nfee_amount: \"261.30\"\nparent_transaction_id: \nexchange_rate: \ngross_amount: \"9000.00\"\nack: Success\npayment_date: \"2010-09-10T07:34:11Z\"\nprotection_eligibility: Eligible\npayment_type: instant\nreason_code: none\n', 'Success')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mGift Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mGift Load (0.3ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.`id` = 10) [0m
+Redirected to http://localhost:3000/brides/3
+Completed in 3038ms (DB: 50) | 302 Found [http://localhost/donations/62/paypal_response?token=EC-74W03347KR373374R&PayerID=WR7XWRYN233AL]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-10 00:34:12) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mBride Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.3ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;35;1mGift Load (0.4ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 3) [0m
+  [4;36;1mGift Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mDonation Load (0.5ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 10) [0m
+  [4;36;1mDonation Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonationTransaction Load (0.5ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 62) [0m
+Rendered gifts/_gift_listing (16.0ms)
+Completed in 81ms (View: 67, DB: 8) | 200 OK [http://localhost/brides/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-10 00:34:21) [GET]
+  [4;35;1mBride Load (0.4ms)[0m   [0mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;36;1mBride Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/brides]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#edit (for 127.0.0.1 at 2010-09-10 00:34:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mBride Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (1.0ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering brides/edit
+  [4;36;1mGift Load (0.4ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 3) [0m
+  [4;35;1mGift Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+Rendered brides/_gift_fields (1.9ms)
+Rendered brides/_gift_fields (1.8ms)
+Rendered brides/_form (30.1ms)
+Completed in 152ms (View: 61, DB: 6) | 200 OK [http://localhost/brides/3/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-10 00:34:31) [GET]
+  [4;35;1mBride Load (0.4ms)[0m   [0mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;36;1mBride Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+Completed in 21ms (View: 13, DB: 3) | 200 OK [http://localhost/brides]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-10 00:34:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mBride Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.3ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (0.4ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 3) [0m
+  [4;35;1mGift Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 10) [0m
+  [4;35;1mDonation Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonationTransaction Load (0.4ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 62) [0m
+Rendered gifts/_gift_listing (15.0ms)
+Completed in 41ms (View: 26, DB: 9) | 200 OK [http://localhost/brides/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-10 00:34:42) [GET]
+  Parameters: {"gift_id"=>"10"}
+  [4;36;1mDonation Columns (48.4ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (87.5ms)
+Completed in 149ms (View: 91, DB: 49) | 200 OK [http://localhost/donations/new?gift_id=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#index (for 127.0.0.1 at 2010-09-10 00:34:45) [GET]
+  [4;36;1mDonation Load (0.5ms)[0m   [0;1mSELECT * FROM `donations` [0m
+Rendering template within layouts/application
+Rendering donations/index
+  [4;35;1mDonation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+Completed in 77ms (View: 68, DB: 3) | 200 OK [http://localhost/donations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-10 00:35:10) [GET]
+  [4;35;1mBride Load (0.4ms)[0m   [0mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;36;1mBride Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+Completed in 63ms (View: 56, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-10 00:35:12) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mBride Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (0.3ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (0.4ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 3) [0m
+  [4;35;1mGift Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 10) [0m
+  [4;35;1mDonation Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonationTransaction Load (0.4ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 62) [0m
+Rendered gifts/_gift_listing (16.1ms)
+Completed in 43ms (View: 28, DB: 9) | 200 OK [http://localhost/brides/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#new (for 127.0.0.1 at 2010-09-10 00:35:19) [GET]
+  Parameters: {"gift_id"=>"10"}
+  [4;36;1mDonation Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+Rendering template within layouts/application
+Rendering donations/new
+Rendered donations/_form (6.7ms)
+Completed in 103ms (View: 11, DB: 3) | 200 OK [http://localhost/donations/new?gift_id=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#create (for 127.0.0.1 at 2010-09-10 00:35:29) [POST]
+  Parameters: {"commit"=>"paypal_express", "commit.x"=>"70", "authenticity_token"=>"oWI4ycYGJFoDYOxCr4yk1Oj01PHyvNRtadvNILrLjss=", "commit.y"=>"11", "donation"=>{"gift_id"=>"10", "amount"=>"99", "last_name"=>"eee", "first_name"=>"jjj"}}
+  [4;36;1mDonation Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.4ms)[0m   [0;1mINSERT INTO `donations` (`gift_id`, `card_expiration`, `created_at`, `card_type`, `express_payer_id`, `express_token`, `updated_at`, `amount`, `last_name`, `ip_address`, `first_name`, `paypal_donation`) VALUES(10, NULL, '2010-09-10 07:35:29', NULL, NULL, NULL, '2010-09-10 07:35:29', 99.0, 'eee', '127.0.0.1', 'jjj', 1)[0m
+  [4;35;1mSQL (20.1ms)[0m   [0mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-3030564970514725L
+Completed in 666ms (DB: 23) | 302 Found [http://localhost/donations]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DonationsController#paypal_response (for 127.0.0.1 at 2010-09-10 00:35:49) [GET]
+  Parameters: {"token"=>"EC-3030564970514725L", "id"=>"63", "PayerID"=>"WR7XWRYN233AL"}
+  [4;35;1mDonation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonation Load (0.4ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.`id` = 63) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Update (0.3ms)[0m   [0;1mUPDATE `donations` SET `updated_at` = '2010-09-10 07:35:49', `express_token` = 'EC-3030564970514725L', `express_payer_id` = 'WR7XWRYN233AL' WHERE `id` = 63[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDonationTransaction Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonationTransaction Create (0.3ms)[0m   [0;1mINSERT INTO `donation_transactions` (`created_at`, `updated_at`, `action`, `amount`, `authorization`, `success`, `donation_id`, `params`, `message`) VALUES('2010-09-10 07:35:52', '2010-09-10 07:35:52', 'submit_express_donation', 9900.0, '8WH62524T87790746', 1, 63, '--- \npayment_status: Completed\ntax_amount_currency_id: USD\ncorrelation_id: a2b36584bb1a6\ntimestamp: \"2010-09-10T07:35:52Z\"\npending_reason: none\ntoken: EC-3030564970514725L\ntransaction_id: 8WH62524T87790746\nbuild: \"1500373\"\ntax_amount: \"0.00\"\ntransaction_type: express-checkout\nfee_amount_currency_id: USD\nreceipt_id: \nversion: \"59.0\"\ngross_amount_currency_id: USD\nfee_amount: \"3.17\"\nparent_transaction_id: \nexchange_rate: \ngross_amount: \"99.00\"\nack: Success\npayment_date: \"2010-09-10T07:35:51Z\"\nprotection_eligibility: Eligible\npayment_type: instant\nreason_code: none\n', 'Success')[0m
+  [4;35;1mSQL (34.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mGift Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mGift Load (2.5ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.`id` = 10) [0m
+Redirected to http://localhost:3000/brides/3
+Completed in 3126ms (DB: 46) | 302 Found [http://localhost/donations/63/paypal_response?token=EC-3030564970514725L&PayerID=WR7XWRYN233AL]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-10 00:35:52) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mBride Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `brides`[0m
+  [4;36;1mBride Load (0.6ms)[0m   [0;1mSELECT * FROM `brides` WHERE (`brides`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;35;1mGift Load (0.4ms)[0m   [0mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 3) [0m
+  [4;36;1mGift Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `gifts`[0m
+  [4;35;1mDonation Load (0.4ms)[0m   [0mSELECT * FROM `donations` WHERE (`donations`.gift_id = 10) [0m
+  [4;36;1mDonation Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mDonationTransaction Load (0.5ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 62) [0m
+  [4;36;1mDonationTransaction Load (0.3ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 63) [0m
+Rendered gifts/_gift_listing (17.6ms)
+Completed in 188ms (View: 174, DB: 8) | 200 OK [http://localhost/brides/3]
+  [4;36;1mSQL (198.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-11 13:15:47) [GET]
+  [4;35;1mBride Load (480.7ms)[0m   [0mSELECT * FROM `brides` [0m
+Rendering template within layouts/application
+Rendering brides/index
+  [4;36;1mBride Columns (181.4ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+Completed in 1439ms (View: 602, DB: 860) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#show (for 127.0.0.1 at 2010-09-11 13:15:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mBride Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mBride Load (73.4ms)[0m   [0mSELECT * FROM `brides` WHERE (`brides`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering brides/show
+  [4;36;1mGift Load (28.3ms)[0m   [0;1mSELECT * FROM `gifts` WHERE (`gifts`.bride_id = 3) [0m
+  [4;35;1mGift Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mDonation Load (2.1ms)[0m   [0;1mSELECT * FROM `donations` WHERE (`donations`.gift_id = 10) [0m
+  [4;35;1mDonation Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `donations`[0m
+  [4;36;1mDonationTransaction Load (19.8ms)[0m   [0;1mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 62) [0m
+  [4;35;1mDonationTransaction Load (0.6ms)[0m   [0mSELECT * FROM `donation_transactions` WHERE (`donation_transactions`.donation_id = 63) [0m
+Rendered gifts/_gift_listing (96.2ms)
+Completed in 292ms (View: 155, DB: 130) | 200 OK [http://localhost/brides/3]
+  [4;36;1mSQL (82.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (181.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (493.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGifts (20100824213302)
+Migrating to CreateBrides (20100824213338)
+Migrating to CreateDonations (20100825185248)
+Migrating to CreateDonationTransactions (20100825203335)
+Migrating to DeviseCreateUsers (20100913211756)
+  [4;35;1mSQL (264.3ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (631.3ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (323.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (310.5ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Key column 'facebook_uid' doesn't exist in table: CREATE UNIQUE INDEX `index_users_on_facebook_uid` ON `users` (`facebook_uid`)[0m
+  [4;36;1mSQL (59.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (115.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (85.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGifts (20100824213302)
+Migrating to CreateBrides (20100824213338)
+Migrating to CreateDonations (20100825185248)
+Migrating to CreateDonationTransactions (20100825203335)
+Migrating to DeviseCreateUsers (20100913211756)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (49.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGifts (20100824213302)
+Migrating to CreateBrides (20100824213338)
+Migrating to CreateDonations (20100825185248)
+Migrating to CreateDonationTransactions (20100825203335)
+Migrating to DeviseCreateUsers (20100913211756)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (100.1ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mUser Columns (151.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (384.1ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (10.7ms)[0m   [0mSHOW KEYS FROM `schema_migrations`[0m
+  [4;36;1mSQL (420.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGifts (20100824213302)
+  [4;35;1mSQL (32.0ms)[0m   [0mCREATE TABLE `gifts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `price` float, `total_donations` float, `bride_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (31.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100824213302')[0m
+Migrating to CreateBrides (20100824213338)
+  [4;35;1mSQL (113.8ms)[0m   [0mCREATE TABLE `brides` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `wedding_day` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100824213338')[0m
+Migrating to CreateDonations (20100825185248)
+  [4;35;1mSQL (115.8ms)[0m   [0mCREATE TABLE `donations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gift_id` int(11), `ip_address` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `card_type` varchar(255), `card_expiration` date, `amount` float, `express_token` varchar(255), `express_payer_id` varchar(255), `paypal_donation` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100825185248')[0m
+Migrating to CreateDonationTransactions (20100825203335)
+  [4;35;1mSQL (125.8ms)[0m   [0mCREATE TABLE `donation_transactions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `donation_id` int(11), `action` varchar(255), `amount` float, `success` tinyint(1), `authorization` varchar(255), `message` varchar(255), `params` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100825203335')[0m
+Migrating to DeviseCreateUsers (20100913211756)
+  [4;35;1mSQL (114.0ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (250.6ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (212.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (221.9ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Key column 'facebook_uid' doesn't exist in table: CREATE UNIQUE INDEX `index_users_on_facebook_uid` ON `users` (`facebook_uid`)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGifts (20100824213302)
+Migrating to CreateBrides (20100824213338)
+Migrating to CreateDonations (20100825185248)
+Migrating to CreateDonationTransactions (20100825203335)
+Migrating to DeviseCreateUsers (20100913211756)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (174.8ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `schema_migrations`[0m
+  [4;36;1mSQL (225.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGifts (20100824213302)
+  [4;35;1mSQL (134.1ms)[0m   [0mCREATE TABLE `gifts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `price` float, `total_donations` float, `bride_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100824213302')[0m
+Migrating to CreateBrides (20100824213338)
+  [4;35;1mSQL (115.2ms)[0m   [0mCREATE TABLE `brides` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `wedding_day` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100824213338')[0m
+Migrating to CreateDonations (20100825185248)
+  [4;35;1mSQL (134.5ms)[0m   [0mCREATE TABLE `donations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gift_id` int(11), `ip_address` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `card_type` varchar(255), `card_expiration` date, `amount` float, `express_token` varchar(255), `express_payer_id` varchar(255), `paypal_donation` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100825185248')[0m
+Migrating to CreateDonationTransactions (20100825203335)
+  [4;35;1mSQL (132.1ms)[0m   [0mCREATE TABLE `donation_transactions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `donation_id` int(11), `action` varchar(255), `amount` float, `success` tinyint(1), `authorization` varchar(255), `message` varchar(255), `params` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100825203335')[0m
+Migrating to DeviseCreateUsers (20100913211756)
+  [4;35;1mSQL (119.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (237.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (211.3ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (234.2ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100913211756')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.3ms)[0m   [0;1mSHOW FIELDS FROM `brides`[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mdescribe `brides`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `brides`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSHOW FIELDS FROM `donation_transactions`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `donation_transactions`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW KEYS FROM `donation_transactions`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `donations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `donations`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `gifts`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `gifts`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW KEYS FROM `gifts`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-14 10:29:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"brides"}
+Redirected to http://www.facebook.com/install.php?api_key=API_KEY&v=1.0&next=http%3A%2F%2Flocalhost%3A3000%2Fbrides
+Filter chain halted as [:ensure_application_is_installed_by_facebook_user] rendered_or_redirected.
+Completed in 492ms (DB: 0) | 302 Found [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BridesController#index (for 127.0.0.1 at 2010-09-14 10:29:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"brides"}
+Redirected to http://www.facebook.com/install.php?api_key=API_KEY&v=1.0&next=http%3A%2F%2Flocalhost%3A3000%2Fbrides
+Filter chain halted as [:ensure_application_is_installed_by_facebook_user] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/]

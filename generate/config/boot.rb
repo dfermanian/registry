@@ -106,46 +106,5 @@ module Rails
   end
 end
 
-class Rails::Boot
-  def run
-    load_initializer
-    extend_environment
-    Rails::Initializer.run(:set_load_path)
-  end
-
-  def extend_environment
-    Rails::Initializer.class_eval do
-      old_load = instance_method(:load_environment)
-      define_method(:load_environment) do
-        Bundler.require :default, Rails.env
-        old_load.bind(self).call
-      end
-    end
-  end
-end
-
 # All that for this:
 Rails.boot!
-=begin
-class Rails::Plugin::GemLocator
-  # find the original that we patch in rails/lib/rails/plugin/locator.rb:80
-  def plugins
-    specs     = Bundler.load.specs_for(:default, Rails.env)
-    specs    += Gem.loaded_specs.values.select do |spec|
-      spec.loaded_from && # prune stubs
-        # File.exist?(File.join(spec.full_gem_path, "rails", "init.rb"))
-        (File.exist?(File.join(spec.full_gem_path, "rails", "init.rb")) || File.exist?(File.join(spec.full_gem_path, "init.rb")))
-    end
-    specs.compact!
-
-    require "rubygems/dependency_list"
-
-    deps = Gem::DependencyList.new
-    deps.add(*specs) unless specs.empty?
-
-    deps.dependency_order.collect do |spec|
-      Rails::GemPlugin.new(spec, nil)
-    end
-  end
-end
-=end

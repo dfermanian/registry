@@ -8,7 +8,7 @@
   <strong>Wedding Day:</strong>
   <%=h @bride.wedding_day %>
 </p>
-  <h2>Gifts:</h2>
+  <h2>Gifts</h2>
 	<% @bride.gifts.each do |g| %>
 		<%= render "gifts/gift_listing", :g => g %>
 	<% end %>

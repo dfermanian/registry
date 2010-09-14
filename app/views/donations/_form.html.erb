@@ -10,22 +10,24 @@
 		  <%= f.label :last_name %><br />
 		  <%= f.text_field :last_name %>
 		</p>
+
 		<p>
-		  <%= f.label :card_type %><br />
-		<%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american express"]]%>
+		  <%#= f.label :card_type %><br />
+		<%#= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american express"]]%>
 		</p>
 		<p>
-		  <%= f.label :card_number %><br />
-		  <%= f.text_field :card_number %>
+		  <%#= f.label :card_number %><br />
+		  <%#= f.text_field :card_number %>
 		</p>
 		<p>
-		  <%= f.label :card_verification, "Credit Verification Value (CVV)"%><br />
-		  <%= f.text_field :card_verification %>
+		  <%#= f.label :card_verification, "Credit Verification Value (CVV)"%><br />
+		  <%#= f.text_field :card_verification %>
 		</p>
 		<p>
-		  <%= f.label :card_expiration %><br />
-		  <%= f.date_select :card_expiration, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
+		  <%#= f.label :card_expiration %><br />
+		  <%#= f.date_select :card_expiration, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
 		</p>
+
 		<p>
 	    <%= f.label :amount %><br />
 	    <%= f.text_field :amount %>
