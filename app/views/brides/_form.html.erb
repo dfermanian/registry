@@ -1,0 +1,16 @@
+<% form_for @bride do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :wedding_day %><br />
+    <%= f.datetime_select :wedding_day %>
+  </p>
+	<% f.fields_for :gifts do |builder| %>
+		<%= render 'gift_fields', :f => builder %>
+	<% end %>
+	<p><%= link_to_add_fields "Add Gift", f, :gifts %>
+  <p><%= f.submit %></p>
+<% end %>

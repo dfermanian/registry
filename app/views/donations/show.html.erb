@@ -1,0 +1,44 @@
+<% title "Donation" %>
+
+<p>
+  <strong>First Name:</strong>
+  <%=h @donation.first_name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%=h @donation.last_name %>
+</p>
+<p>
+  <strong>Card Type:</strong>
+  <%=h @donation.card_type %>
+</p>
+<p>
+  <strong>Card Expiration:</strong>
+  <%=h @donation.card_expiration %>
+</p>
+<p>
+  <strong>Amount:</strong>
+  <%=h @donation.amount %>
+</p>
+<p>
+  <strong>paypal?:</strong>
+  <%=h @donation.paypal_donation %>
+</p>
+<p>
+  <strong>gift id:</strong>
+  <%=h @donation.gift_id %>
+</p>
+<p>
+  <strong>express token:</strong>
+  <%=h @donation.express_token %>
+</p>
+<p>
+  <strong>express payer id:</strong>
+  <%=h @donation.express_payer_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_donation_path(@donation) %> |
+  <%= link_to "Destroy", @donation, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", donations_path %>
+</p>

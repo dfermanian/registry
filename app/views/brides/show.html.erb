@@ -1,0 +1,20 @@
+<% title "Bride" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @bride.name %>
+</p>
+<p>
+  <strong>Wedding Day:</strong>
+  <%=h @bride.wedding_day %>
+</p>
+  <h2>Gifts</h2>
+	<% @bride.gifts.each do |g| %>
+		<%= render "gifts/gift_listing", :g => g %>
+	<% end %>
+
+<p>
+  <%= link_to "Edit", edit_bride_path(@bride) %> |
+  <%= link_to "Destroy", @bride, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", brides_path %>
+</p>

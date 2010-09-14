@@ -1,0 +1,23 @@
+defaults: &defaults
+    # Required.
+    client_id: YOUR_APP_API_ID
+    client_secret: YOUR_APP_SECRET_KEY
+    authorization_server: https://graph.facebook.com
+    requested_scope:  email,offline_access,publish_stream
+  
+
+
+development:
+  <<: *defaults
+
+test: &test
+  <<: *defaults
+
+production: &production
+  <<: *defaults
+
+# staging:
+#   <<: *production
+#
+# cucumber:
+#   <<: *test
