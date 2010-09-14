@@ -9,22 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20100908180158) do
+ActiveRecord::Schema.define(:version => 20100913211756) do
 
   create_table "assignments", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-=======
-ActiveRecord::Schema.define(:version => 20100913211756) do
->>>>>>> be29e3566f0629716e0ca842278d112f0003af5e
 
   create_table "brides", :force => true do |t|
     t.string   "name"
     t.date     "wedding_day"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "paypal_email"
   end
 
   create_table "donation_transactions", :force => true do |t|
@@ -54,19 +51,22 @@ ActiveRecord::Schema.define(:version => 20100913211756) do
     t.datetime "updated_at"
   end
 
+  create_table "facebook_templates", :force => true do |t|
+    t.string "template_name", :null => false
+    t.string "content_hash",  :null => false
+    t.string "bundle_id"
+  end
+
+  add_index "facebook_templates", ["template_name"], :name => "index_facebook_templates_on_template_name", :unique => true
+
   create_table "gifts", :force => true do |t|
     t.string   "name"
     t.float    "price"
-<<<<<<< HEAD
-=======
-    t.float    "total_donations"
->>>>>>> be29e3566f0629716e0ca842278d112f0003af5e
     t.integer  "bride_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
   create_table "hellos", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -86,10 +86,10 @@ ActiveRecord::Schema.define(:version => 20100913211756) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "facebook_id", :null => false
+    t.string   "facebook_id",                                         :null => false
     t.string   "session_key"
-=======
-  create_table "users", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "email",                               :default => "", :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
     t.string   "password_salt",                       :default => "", :null => false
@@ -104,16 +104,10 @@ ActiveRecord::Schema.define(:version => 20100913211756) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
->>>>>>> be29e3566f0629716e0ca842278d112f0003af5e
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-=======
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
->>>>>>> be29e3566f0629716e0ca842278d112f0003af5e
 end

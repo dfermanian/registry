@@ -1,5 +1,7 @@
 <fb:fbml> 
+You successfully invited these people: <p>
 	<% for id in @sent_to_ids%>
 		<%= fb_profile_pic id %> <%= fb_name id %><br /> 
 	<% end %>
+<%=link_to "Go back to your bride profile", :controller => :brides%>
 </fb:fbml>
