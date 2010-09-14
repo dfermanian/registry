@@ -11,7 +11,7 @@ class BridesController < ApplicationController
     @bride = Bride.new
     2.times do
       gift = @bride.gifts.build
-      gift.total_donations = 0
+#      gift.total_donations = 0
     end
   end
   
