@@ -9,12 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20100908180158) do
 
   create_table "assignments", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+=======
+ActiveRecord::Schema.define(:version => 20100913211756) do
+>>>>>>> be29e3566f0629716e0ca842278d112f0003af5e
 
   create_table "brides", :force => true do |t|
     t.string   "name"
@@ -53,11 +57,16 @@ ActiveRecord::Schema.define(:version => 20100908180158) do
   create_table "gifts", :force => true do |t|
     t.string   "name"
     t.float    "price"
+<<<<<<< HEAD
+=======
+    t.float    "total_donations"
+>>>>>>> be29e3566f0629716e0ca842278d112f0003af5e
     t.integer  "bride_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "hellos", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -79,8 +88,32 @@ ActiveRecord::Schema.define(:version => 20100908180158) do
   create_table "users", :force => true do |t|
     t.string   "facebook_id", :null => false
     t.string   "session_key"
+=======
+  create_table "users", :force => true do |t|
+    t.string   "email",                               :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                       :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+>>>>>>> be29e3566f0629716e0ca842278d112f0003af5e
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
+=======
+  add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+>>>>>>> be29e3566f0629716e0ca842278d112f0003af5e
 end

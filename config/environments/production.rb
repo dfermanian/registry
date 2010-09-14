@@ -9,6 +9,7 @@ config.action_controller.consider_all_requests_local = false
 config.action_controller.perform_caching             = true
 config.action_view.cache_template_loading            = true
 
+
 config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :test
   paypal_options = {
@@ -18,4 +19,5 @@ config.after_initialize do
     }
     ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
     ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
-  end
+end
+
