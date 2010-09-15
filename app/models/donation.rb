@@ -1,6 +1,8 @@
 class Donation < ActiveRecord::Base
   #attr_accessible :ip_address, :first_name, :last_name, :card_type, :card_expiration
   
+  belongs_to :user
+  
   belongs_to :gift
     
   has_many :transactions, :class_name => "DonationTransaction", :dependent => :destroy
