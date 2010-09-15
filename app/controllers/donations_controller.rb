@@ -25,6 +25,8 @@ class DonationsController < ApplicationController
     @donation = Donation.new(params[:donation])
     @donation.ip_address = request.remote_ip
     (params[:commit] == "paypal_express")? @donation.paypal_donation = true : @donation.paypal_donation = false
+
+    @donation.user = User.for(facebook_session.user.to_i, facebook_session)
     if @donation.save
       unless @donation.paypal_donation
         if @donation.submit_donation
@@ -38,7 +40,7 @@ class DonationsController < ApplicationController
             :return_url => paypal_response_donation_url(@donation),
             :cancel_return_url => brides_url)
           redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
-          @donation.user=User.for facebook_session.user.to_s
+
       end
     end
   end
