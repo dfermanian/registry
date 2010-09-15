@@ -38,7 +38,7 @@ class DonationsController < ApplicationController
             :return_url => paypal_response_donation_url(@donation),
             :cancel_return_url => brides_url)
           redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
-          @donation.user_id=facebook_session.user.to_s
+          @donation.user=User.for facebook_session.user.to_s
       end
     end
   end
