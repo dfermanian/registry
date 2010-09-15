@@ -36,3 +36,4 @@ class User < ActiveRecord::Base
   
 end
 
+#devise_facebook_open_graph
