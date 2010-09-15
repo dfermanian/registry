@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100913211756) do
+ActiveRecord::Schema.define(:version => 20100915194324) do
 
   create_table "assignments", :force => true do |t|
     t.datetime "created_at"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20100913211756) do
     t.boolean  "paypal_donation"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "facebook_templates", :force => true do |t|

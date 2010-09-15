@@ -26,7 +26,7 @@ class DonationsController < ApplicationController
     @donation.ip_address = request.remote_ip
     (params[:commit] == "paypal_express")? @donation.paypal_donation = true : @donation.paypal_donation = false
 
-    @donation.user = User.for(facebook_session.user.to_i, facebook_session)
+    @donation.user = current_user
     if @donation.save
       unless @donation.paypal_donation
         if @donation.submit_donation
