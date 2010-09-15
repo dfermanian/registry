@@ -10,7 +10,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
 #      t.timestamps
     end
 
-    add_index :users, :email,                :unique => true
+    add_index :users, :email                #,:unique => true
 
     add_index :users, :confirmation_token,   :unique => true
     add_index :users, :reset_password_token, :unique => true
@@ -18,6 +18,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :users
+
+    remove_index :users, :email
+    remove_index :users, :confirmation_token
+    remove_index :users, :reset_password_token
   end
 end
