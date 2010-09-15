@@ -40,7 +40,6 @@ class DonationsController < ApplicationController
             :return_url => paypal_response_donation_url(@donation),
             :cancel_return_url => brides_url)
           redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
-
       end
     end
   end
@@ -52,9 +51,16 @@ class DonationsController < ApplicationController
     @donation.save
     if @donation.submit_donation
       redirect_to bride_url(@donation.gift.bride_id)
+      render :action => "notify_friends"
     else
       render :action => "failure"
     end
+  end
+  
+  def notify_friends
+    
+    
+    #redirect_to bride_url(@current_user.donations.last.gifts.last.bride_id)
   end
 
   def edit
