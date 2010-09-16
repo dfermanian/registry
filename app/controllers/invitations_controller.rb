@@ -32,5 +32,8 @@ class InvitationsController < ApplicationController
     @sent_to_ids = params[:ids]
   end
   
+  def send_wall_posts
+    
+  end
   
 end

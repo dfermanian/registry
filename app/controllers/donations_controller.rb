@@ -50,18 +50,15 @@ class DonationsController < ApplicationController
     @donation.express_payer_id = params[:PayerID]
     @donation.save
     if @donation.submit_donation
+      UserMailer.profile(current_user.facebook_session.user,current_user.facebook_session.user, "I just made a donation!")
       redirect_to bride_url(@donation.gift.bride_id)
-      render :action => "notify_friends"
+      #render :controller => "invitations" , :action => "send_wall_posts"
     else
       render :action => "failure"
     end
   end
   
-  def notify_friends
-    
-    
-    #redirect_to bride_url(@current_user.donations.last.gifts.last.bride_id)
-  end
+
 
   def edit
     @donation = Donation.find(params[:id])
