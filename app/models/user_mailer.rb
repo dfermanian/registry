@@ -5,6 +5,7 @@ class UserMailer < Facebooker::Rails::Publisher
       from from_user
       target to_user
       message message_fbml
+      action_link {:text=>"Add the app now!", :href => "http://www.apps.facebook.com/ptndlol"}
     end
     
 
